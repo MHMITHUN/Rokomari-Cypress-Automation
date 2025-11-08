@@ -1,19 +1,45 @@
-name: Cypress Tests (Rokomari)
+name: 🚀 Run Cypress E2E Tests
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      # 🧩 1. Checkout code from repo
+      - name: 🛠️ Checkout Repository
+        uses: actions/checkout@v4
+
+      # 🧩 2. Setup Node environment
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - run: npm ci
-      - run: npm test
-      - run: npm run report
-      - uses: actions/upload-artifact@v4
+          node-version: 18
+          cache: "npm"
+
+      # 🧩 3. Install dependencies
+      - name: 📦 Install dependencies
+        run: npm install
+
+      # 🧩 4. Run Cypress tests (headless Chrome)
+      - name: 🧪 Run Cypress Tests
+        uses: cypress-io/github-action@v6
         with:
-          name: mochawesome-report
+          browser: chrome
+          headless: true
+          record: false
+          config: video=false,reporter=mochawesome
+
+      # 🧩 5. Upload Cypress HTML mochawesome report
+      - name: 📊 Upload Mochawesome Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cypress-Report
           path: cypress/reports

@@ -28,7 +28,6 @@ describe('Rokomari E2E — CSV → Search → Hover Add → Cart Verify', () => 
 
         cy.wait(2000);
 
-        // 🧠 যদি bookFound না হয় → skip cart
         cy.then(() => {
           if (search.bookFound) {
             cart.openCart();

@@ -5,7 +5,7 @@ module.exports = defineConfig({
     baseUrl: 'https://www.rokomari.com',
     defaultCommandTimeout: 12000,
     pageLoadTimeout: 90000,
-    redirectionLimit: 5,
+    redirectionLimit: 50,  
     video: false,
     screenshotOnRunFailure: true,
     retries: 1,
@@ -14,7 +14,7 @@ module.exports = defineConfig({
       return config;
     },
   },
-  reporter: 'cypress-mochawesome-reporter',
+  reporter: 'mochawesome',
   reporterOptions: {
     reportDir: 'cypress/reports',
     overwrite: false,

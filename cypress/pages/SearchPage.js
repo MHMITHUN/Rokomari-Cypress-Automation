@@ -4,17 +4,27 @@ class SearchPage extends BasePage {
   bookFound = false; // 🔘 status flag
 
   searchBook(bookName) {
-    cy.xpath("//input[@id='js--search']", { timeout: 10000 })
-      .should('be.visible')
-      .clear()
-      .type(bookName, { delay: 100 });
+  cy.log(`🔍 Searching: ${bookName}`);
+  
+  // prevent unnecessary reloads
+  cy.url().then(url => {
+    if (!url.includes("rokomari.com")) {
+      cy.visit("https://www.rokomari.com/");
+    }
+  });
 
-    cy.xpath("//i[@class='ion-ios-search-strong']")
-      .first()
-      .click({ force: true });
+  cy.xpath("//input[@id='js--search']", { timeout: 10000 })
+    .should('be.visible')
+    .clear()
+    .type(bookName, { delay: 100 });
 
-    cy.wait(4000);
-  }
+  cy.xpath("//i[@class='ion-ios-search-strong']")
+    .first()
+    .click({ force: true });
+
+  cy.wait(4000);
+}
+
 
   addToCartByHover(bookTitle) {
     cy.log(`🟢 Trying to add: ${bookTitle}`);
