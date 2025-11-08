@@ -216,7 +216,7 @@ This Cypress framework represents **production-grade E2E testing** for modern we
 ## 👨‍💻 Author
 
 **Md Mahamudul Hasan**
-📧 [mhmmithun1@gmail.com](mailto:mhmmithun1@gmail.com)
+📧 [mhmmithun1@gmail.com](mailto:mhmmithun1@gmail.com)                                               
 🏫 Bangladesh University of Business and Technology (BUBT)
 
 ---
