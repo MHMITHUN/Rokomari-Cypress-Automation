@@ -20,14 +20,14 @@ The framework automatically generates a **Mochawesome HTML report** after every 
 ### 📈 Mochawesome Report Example
 A sample report from a successful test run (Duration: 636 seconds / 10.6 minutes):
 
-![Mochawesome Report]()
+![Mochawesome Report](https://raw.githubusercontent.com/MHMITHUN/Rokomari-Cypress-Automation/refs/heads/main/cypress/screenshots/mock1.png)
 
 ### 🎥 Test Execution Demo
 *(You can replace this with your own GIF or test recording)*
 
-![Test Execution]()
+![Test Execution](https://raw.githubusercontent.com/MHMITHUN/Rokomari-Cypress-Automation/refs/heads/main/cypress/screenshots/output1.png)
 
-![Test Execution]()
+![Test Execution](https://raw.githubusercontent.com/MHMITHUN/Rokomari-Cypress-Automation/refs/heads/main/cypress/screenshots/output2.png)
 
 ---
 
@@ -63,8 +63,8 @@ Before running the project, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/rokomari-cypress-automation.git
-   
+   git clone https://github.com/MHMITHUN/Rokomari-Cypress-Automation.git
+
 
 2. Navigate into the project directory:
 
@@ -225,9 +225,6 @@ This Cypress framework represents **production-grade E2E testing** for modern we
 **Repository:** [Rokomari Cypress Automation](https://github.com/MHMITHUN/Rokomari-Cypress-Automation)
 
 ```
-
----
-
 ✅ **This version includes everything:**
 - Your real `npm run cypress:open` and `npm test` commands  
 - Full explanations and structure  
