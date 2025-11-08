@@ -11,12 +11,13 @@ class BasePage {
     });
     cy.log("🌐 Visiting Rokomari homepage safely (CI-safe)");
   }
+  // BasePage.js
   ignoreSiteErrors() {
     Cypress.on("uncaught:exception", (err, runnable) => {
-      cy.log("⚠️ Ignored application error:", err.message);
+      console.log("⚠️ Ignored application error:", err.message);
       return false;
     });
-  }
+}
 
   // ✅ Popup handler (auto closes if visible)
   closeAnyPopup() {

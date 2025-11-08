@@ -22,6 +22,8 @@ module.exports = defineConfig({
     inlineAssets: true,
     charts: true,
     html: true,
-    json: true
+    json: true,
+    code: true,
+    showHooks: true
   }
 });

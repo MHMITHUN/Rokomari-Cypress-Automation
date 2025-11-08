@@ -5,11 +5,7 @@
   "description": "Rokomari.com Cypress E2E with POM, XPath selectors, CSV data-driven, and Mochawesome reporting.",
   "scripts": {
     "cypress:open": "cypress open",
-    "test": "cypress run",
-    "report:merge": "npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
-    "report:generate": "npx marge cypress/reports/report.json",
-    "report": "npm run report:merge && npm run report:generate",
-    "test:report": "npm test && npm run report"
+    "test": "cypress run --browser chrome --headed"
   },
   "devDependencies": {
     "cypress": "^13.13.0",
