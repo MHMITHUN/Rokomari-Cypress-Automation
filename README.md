@@ -1,10 +1,4 @@
-Yes ✅ absolutely — those are **important custom npm scripts** and should be **included** in your README so others (or CI/CD systems) know exactly how to run tests both in GUI and headless report mode.
 
-Here’s your **final, corrected, and complete version** — fully formatted in **one markdown code block**, clean, professional, and ready for GitHub 👇
-
----
-
-````markdown
 # 🛍️ Cypress E2E Automation: Rokomari Purchase Flow
 
 ![Cypress](https://img.shields.io/badge/Cypress-13.x-darkgreen.svg?logo=cypress)
@@ -70,7 +64,7 @@ Before running the project, ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/rokomari-cypress-automation.git
-````
+   
 
 2. Navigate into the project directory:
 
