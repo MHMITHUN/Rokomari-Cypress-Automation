@@ -223,10 +223,3 @@ This Cypress framework represents **production-grade E2E testing** for modern we
 
 **License:** MIT
 **Repository:** [Rokomari Cypress Automation](https://github.com/MHMITHUN/Rokomari-Cypress-Automation)
-
-```
-✅ **This version includes everything:**
-- Your real `npm run cypress:open` and `npm test` commands  
-- Full explanations and structure  
-- Ready for direct use in GitHub README.md or documentation page
-```
